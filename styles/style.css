@@ -1,0 +1,189 @@
+/* Reset classes */
+body {
+    font-size: 62.2%;
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Mono', monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+figure {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    list-style-type: none;
+}
+/* Generic classes */
+.content {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.title,
+.subtitle {
+    font-weight: 400;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.title {
+    font-size: 3.6rem;
+}
+.subtitle {
+    font-size: 2.6rem;
+}
+/* Menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-nav .menu-list {
+    display: none;
+}
+.menu-nav .menu-list a {
+    color: #333;
+    text-decoration: none;
+}
+.menu-nav .menu-list li {
+    display: inline-block;
+    margin-right: 2rem;
+    text-transform: uppercase;
+}
+.menu-nav .menu-list-content li:last-child {
+    margin-right: 0;
+}
+.bar-menu-content {
+    /* width: 20px; */
+    position: relative;
+    /* overflow: hidden; */
+    display: block;
+}
+.bar-menu {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    right: 100%;
+}
+.bar-menu:checked ~ .menu-list {
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, .9);
+}
+.bar-menu:checked ~ .menu-list .menu-list-content {
+    width: 80%;
+    margin: 20% auto 0;
+    text-align: center;
+}
+.bar-menu:checked ~ .menu-list .menu-list-content li {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.6rem;
+}
+.bar-icon,
+.close-icon {
+    cursor: pointer;
+    font-size: 1rem;
+}
+.close-icon {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    font-size: 1.5rem;
+}
+/* Episodios classes */
+.episodiosContent {
+    position: relative;
+}
+.bg-episodios {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #0000a3 30%,#0000ff  70%);
+    clip-path: polygon(0% 9%, 100% 0, 100% 95%, 0% 100%);
+    position: absolute;
+}
+.subtitleEpisodios {
+    width: 100%;
+    color: #fff;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.info-episodios {
+    padding: 5rem 0 12rem;
+    position: relative;
+    z-index: 1;
+}
+.podcastGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 14%
+}
+.podcast {
+    width: 100%;
+    min-width: 298px;
+    max-width: 298px;
+    height: 225px;
+    margin-bottom: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;;
+}
+.podcast1 {
+    background-image: url("../images/embed1_.png");
+}
+.podcast2 {
+    background-image: url('../images/embed2_.png');
+}
+.podcast3 {
+    background-image: url('../images/embed3_.png');
+}
+.podcast4 {
+    background-image: url('../images/embed3_.png');
+}
+/* Venimos classes */
+.venimos-content .phone {
+    position: relative;
+    min-height: 25.4rem;
+}
+
+.venimos-content .phone img {
+    top: -8rem;
+    width: 100%;
+    max-width: 20.9rem;
+    min-width: 17.9rem;
+    left: calc(50% - 9.5rem);
+    position: absolute;
+}
+.venimos-article {
+    margin-top: 1rem;
+}
+/* Invitados classes */
+.subtitle-invitados {
+    padding-left: 1rem;
+}
+.invitados-info figure img {
+    display: block;
+    max-width: 100%;
+}
+@media screen and (min-width: 600px) {
+    .menu-nav .menu-list {
+        display: block;
+    }
+    .bar-icon,
+    .close-icon {
+        display: none;
+    }
+}
