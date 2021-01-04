@@ -298,4 +298,11 @@ p {
     .podcast-mobile {
         display: none;
     }
+    .invitados-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .invitados-info figure {
+        flex: 1 1 33%;
+    }
 }
